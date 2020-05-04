@@ -1,0 +1,19 @@
+package com.jetbrains.shapes.homework4;
+import com.jetbrains.shapes.PerimeterCalculation;
+import com.jetbrains.shapes.Rectangle;
+
+public class Square extends Rectangle implements PerimeterCalculation {
+
+    public Square(double a) {
+        super(a,a);
+    }
+
+    public double calcSurface(){
+        return Math.pow(parA,2);
+    }
+
+    public double calcPerimeter(){
+        return parA*4;
+
+    }
+}
