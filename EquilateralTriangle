@@ -1,0 +1,20 @@
+package com.jetbrains.shapes.homework4;
+
+import com.jetbrains.shapes.PerimeterCalculation;
+
+public class EquilateralTriangle extends Triangle implements PerimeterCalculation {
+
+    public EquilateralTriangle(double a) {
+        super(a, a, a);
+    }
+
+    public double calcSurface() {
+        Double s=(parA+parB+parC)/2;
+        return Math.sqrt(s*(s-parA)*(s-parB)*(s-parC));
+    }
+
+    @Override
+    public double calcPerimeter() {
+        return parA+parB+parC;
+    }
+}
