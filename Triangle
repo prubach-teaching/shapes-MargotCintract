@@ -1,0 +1,21 @@
+import com.jetbrains.shapes.PerimeterCalculation;
+import com.jetbrains.shapes.Shape;
+
+public class Triangle extends Shape implements PerimeterCalculation {
+
+    public Triangle(double a,double b, double c){
+        super(a,b,c);
+    }
+
+    @Override
+    public double calcSurface() {
+        Double s=(parA+parB+parC)/2;
+        return Math.sqrt(s*(s-parA)*(s-parB)*(s-parC));
+    }
+
+
+    @Override
+    public double calcPerimeter() {
+        return parA+parB+parC;
+    }
+}
